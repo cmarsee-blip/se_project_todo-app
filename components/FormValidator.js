@@ -10,11 +10,22 @@ class FormValidator {
     this._formEl = formEl;
   }
 
+  _showInputError() {
+    inputElement.classList.add(this._inputErrorClass);
+  }
+
+  _hideInputError() {
+    inputElement.classList.remove(this._inputErrorClass);
+  }
+
   _checkInputValidity(inputElement) {
     if (!inputElement.validity.valid) {
-      _showInputError(this._inputElement, this._inputElement.validationMessage);
+      this._showInputError(
+        this._inputElement,
+        this._inputElement.validationMessage,
+      );
     } else {
-      _hideInputError(inputElement);
+      this._hideInputError(inputElement);
     }
   }
 
