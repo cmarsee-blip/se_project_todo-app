@@ -12,23 +12,23 @@ class FormValidator {
 
   _checkInputValidity(inputElement) {
     if (!inputElement.validity.valid) {
-      showInputError(this._inputElement, this._inputElement.validationMessage);
+      _showInputError(this._inputElement, this._inputElement.validationMessage);
     } else {
-      hideInputError(inputElement);
+      _hideInputError(inputElement);
     }
   }
 
-  _toggleButtonState() {
-    const hasInvalidInput = this._inputList.some(
-      (input) => !input.validity.valid,
-    );
+  _hasInvalidInput() {
+    return this._inputList.some((input) => !input.validity.valid);
+  }
 
-    if (hasInvalidInput(inputList)) {
-      buttonElement.classList.add(settings.inactiveButtonClass);
-      buttonElement.disabled = true;
+  _toggleButtonState() {
+    if (this._hasInvalidInput(this._inputList)) {
+      this._buttonElement.classList.add(this._inactiveButtonClass);
+      this._buttonElement.disabled = true;
     } else {
-      buttonElement.classList.remove(settings.inactiveButtonClass);
-      buttonElement.disabled = false;
+      this._buttonElement.classList.remove(this._inactiveButtonClass);
+      this._buttonElement.disabled = false;
     }
   }
 
