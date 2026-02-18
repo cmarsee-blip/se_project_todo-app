@@ -1,14 +1,14 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+This Todo app is here to be utilized as a checklist.
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+The project utilizes form validators & modules to make a functioning app.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+VSCode & TripleTen's Dot AI to complete this project.
 
 ## Deployment
 
