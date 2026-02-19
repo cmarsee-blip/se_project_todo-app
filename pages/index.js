@@ -54,7 +54,7 @@ addTodoForm.addEventListener("submit", (evt) => {
 });
 
 initialTodos.forEach((item) => {
-  crenderTodo(values);
+  renderTodo(values);
 });
 
 function renderTodo(todoData) {
