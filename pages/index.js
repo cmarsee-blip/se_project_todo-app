@@ -49,7 +49,10 @@ addTodoForm.addEventListener("submit", (evt) => {
   todosList.append(todo);
   closeModal(addTodoPopup);
 
-  FormValidator.resetValidation();
+  const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
+  newTodoValidator.enableValidation();
+
+  newTodoValidator.resetValidation();
 });
 
 initialTodos.forEach((item) => {
@@ -61,6 +64,3 @@ function renderTodo(todoData) {
   const todo = generateTodo(todoData);
   todosList.append(todo);
 }
-
-const newTodoValidator = new FormValidator(validationConfig, addTodoForm);
-newTodoValidator.enableValidation();
