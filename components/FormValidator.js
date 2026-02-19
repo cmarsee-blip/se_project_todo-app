@@ -10,7 +10,7 @@ class FormValidator {
   }
 
   _showInputError(inputElement, errorMessage) {
-    const errorElement = this._formElement.querySelector(
+    const errorElement = this._formEl.querySelector(
       `#${inputElement.id}-error`,
     );
     inputElement.classList.add(this._inputErrorClass);
@@ -18,10 +18,12 @@ class FormValidator {
     errorElement.classList.add(this._errorClass);
   }
   _hideInputError(inputElement) {
-    const errorElement = this._formElement.querySelector(
+    const errorElement = this._formEl.querySelector(
       `#${inputElement.id}-error`,
     );
     inputElement.classList.remove(this._inputErrorClass);
+    errorElement.textContent = "";
+    errorElement.classList.remove(this._errorClass);
   }
 
   _checkInputValidity(inputElement) {
@@ -59,7 +61,7 @@ class FormValidator {
     this._inputList.forEach((inputElement) => {
       inputElement.addEventListener("input", () => {
         this._checkInputValidity(inputElement);
-        this._toggleButtonState(this._inputList, buttonElement);
+        this._toggleButtonState();
       });
     });
   }
