@@ -4,7 +4,7 @@ class Popup {
     this._popupCloseBtn = this._popupEl.querySelector(".popup__close");
   }
 
-  _handleEscapeClose() {
+  _handleEscapeClose(evt) {
     if (evt.key === "Escape") {
       this.close();
     }
@@ -17,6 +17,8 @@ class Popup {
 
   close() {
     this._popupEl.classList.remove("popup_visible");
+    document.removeEventListener("keyup", this._handleEscapeClose);
+    this.close();
     // TODO - remove the escape listener
   }
 
