@@ -18,21 +18,17 @@ class Popup {
   close() {
     this._popupEl.classList.remove("popup_visible");
     document.removeEventListener("keyup", this._handleEscapeClose);
-    this.close();
-    // TODO - remove the escape listener
   }
 
   setEventListeners() {
-    // this._popupCloseBtn.addEventListener("click", () => {
-    //  this.close();
-    // });
-
-    // This one listener will handle close button and modal listener
+    // Overlay listener must also be implemented from scratch, it isn't in the starting code
     this._popupEl.addEventListener("mousedown", (evt) => {
-      // if the event target's classList contains "pop__close" or "popup"
-      // then close the modal
-      // if (x || y)
-      // if (evt.target)
+      if (
+        evt.target.classList.contains("popup") ||
+        evt.target.classList.contains("popup__close")
+      ) {
+        this.close();
+      }
     });
   }
 }
