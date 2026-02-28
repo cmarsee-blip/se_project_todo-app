@@ -1,14 +1,14 @@
 class Popup {
   constructor({ popupSelector }) {
     this._popupEl = document.querySelector(popupSelector);
-    this._popupCloseBtn = this._popupEl.querySelector(".popup__close");
+    //   this._popupCloseBtn = this._popupEl.querySelector(".popup__close");
   }
 
-  _handleEscapeClose(evt) {
+  _handleEscapeClose = (evt) => {
     if (evt.key === "Escape") {
       this.close();
     }
-  }
+  };
 
   open() {
     this._popupEl.classList.add("popup_visible");

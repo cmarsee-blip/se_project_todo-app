@@ -4,17 +4,19 @@ class Todo {
     this._templateElement = document.querySelector(selector);
     this._handleCheck = handleCheck;
     this._handleDelete = handleDelete;
+    this._completed = this._data.completed;
   }
 
   _setEventListeners() {
-    this._handleDelete(this._completed);
-    this._remove();
     this._todoDeleteBtn.addEventListener("click", () => {
       this._todoElement.remove();
+      this._handleDelete(this._completed);
+      this._remove();
     });
 
     this._todoCheckboxEl.addEventListener("change", () => {
-      this._data.completed = !this._data.completed;
+      this._data.completed = this._todoCheckboxEl.checked;
+      this._handleCheck(this._data.completed);
       this._toggleCompletion();
     });
   }
