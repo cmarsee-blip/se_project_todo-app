@@ -11,11 +11,6 @@ class PopupWithForm extends Popup {
   _getInputValues() {
     const inputValues = {};
     this._inputList.forEach((input) => {
-      // TODO
-      // add a key/value pair for each input
-      // the key is input.name
-      // the value is input.value (1st lesson, Sprint 4 Ch 5)
-      // need to use brackets notation, not dot notation
       inputValues[input.name] = input.value;
     });
     return inputValues;

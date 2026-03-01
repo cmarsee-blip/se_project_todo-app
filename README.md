@@ -15,3 +15,4 @@ VSCode & TripleTen's Dot AI to complete this project.
 This project is deployed on GitHub Pages:
 
 - https://github.com/cmarsee-blip/se_project_todo-app.git
+  https://github.com/cmarsee-blip/se_project_todo-app.git

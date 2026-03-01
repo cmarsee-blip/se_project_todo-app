@@ -18,11 +18,12 @@ function handleCheck(completed) {
   todoCounter.updateCompleted(completed);
 }
 
-function handleDelete(completed) {
+const handleDelete = (completed) => {
+  todoCounter.updateTotal(false);
   if (completed) {
     todoCounter.updateCompleted(false);
   }
-}
+};
 
 const generateTodo = (data) => {
   const todo = new Todo(data, "#todo-template", handleCheck, handleDelete);
@@ -43,13 +44,14 @@ const addTodoPopup = new PopupWithForm({
 
     const values = { name, date, id };
     // todosList.append(todo); // Use addItem method instead
-    addTodoPopup.close();
 
     const todo = generateTodo(values);
     section.addItem(todo);
     todoCounter.updateTotal(true);
 
     newTodoValidator.resetValidation();
+
+    addTodoPopup.close();
   },
 });
 addTodoPopup.setEventListeners();
