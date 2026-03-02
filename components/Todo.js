@@ -53,8 +53,9 @@ class Todo {
   };
 
   getView() {
-    this._todoElement = this._templateElement.content
-      .querySelector(".todo")
+    this._todoElement = document
+      .querySelector(this._selector)
+      .content.querySelector(".todo")
       .cloneNode(true);
     const todoNameEl = this._todoElement.querySelector(".todo__name");
     this._todoDeleteBtn = this._todoElement.querySelector(".todo__delete-btn");
