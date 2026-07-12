@@ -23,7 +23,7 @@ I built a to-do app where users can add, complete, and manage checklist items. T
 
 ## 🖼️ Screenshots
 
-![To-Do App screenshot](path/to/screenshot.png)
+![To-Do App screenshot](ToDo.png)
 
 ## ⚙️ Running It Locally
 
