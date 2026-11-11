@@ -2,7 +2,7 @@
 
 A checklist utility app built with vanilla JavaScript, form validation, and a modular architecture.
 
-🔗 **Live Demo:** [cmarsee-blip.github.io/se_project_todo-app](https://cmarsee-blip.github.io/se_project_todo-app/) &nbsp;|&nbsp; 🎥 **Demo Video:** [link](#) *(optional)*
+🔗 **Live Demo:** [cmarsee-blip.github.io/se_project_todo-app](https://cmarsee-blip.github.io/se_project_todo-app/) &nbsp;|&nbsp; 
 
 ---
 
@@ -39,5 +39,4 @@ The app successfully validates user input and manages checklist items through a 
 
 ## 🚀 Future Improvements
 
-- Fix [add a specific limitation you noticed] using [your planned approach] to achieve [the outcome].
-- Fix [add a specific limitation you noticed] using [your planned approach] to achieve [the outcome].
+- Fix styling to make the calendar picker fit the modal better.
