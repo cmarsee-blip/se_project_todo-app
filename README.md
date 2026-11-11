@@ -2,7 +2,7 @@
 
 A checklist utility app built with vanilla JavaScript, form validation, and a modular architecture.
 
-🔗 **Live Demo:** [cmarsee-blip.github.io/se_project_todo-app](https://cmarsee-blip.github.io/se_project_todo-app/) &nbsp;|&nbsp; 
+🔗 **Live Demo:** [cmarsee-blip.github.io/se_project_todo-app](https://cmarsee-blip.github.io/se_project_todo-app/) 
 
 ---
 
